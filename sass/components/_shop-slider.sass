@@ -1,0 +1,162 @@
+.shop__slider
+    padding-left: 132px
+    @include respond(desctop)
+        padding-left: 20px
+    &-inner
+        display: flex
+        @include respond(desctop)
+            display: block
+    &-info
+        max-width: 480px
+        width: 100%
+        margin-right: 40px
+        padding-top: 166px
+        @include respond(desctop)
+            padding: 55px 0
+    &-price
+        font-family: "FiraSans-ExtraBold"
+        font-size: 32px
+        line-height: 40px
+        text-transform: uppercase
+        margin-bottom: 64px
+        @include respond(specialPoint-1366)
+        margin-bottom: 30px
+        sup
+            font-size: 18px
+    &-content
+        padding-left: 170px
+        display: flex
+        align-items: flex-end
+        @include respond(specialPoint-1366)
+            padding-left: 40px
+        @include respond(specialPoint-680)
+            display: block
+        @include respond(specialPoint-460)
+            padding-left: 20px
+.shop__extras
+    padding-left: 150px
+    @include respond(tab-port)
+        padding-left: 75px
+    @include respond(specialPoint-680)
+        padding: 35px 0 0 0
+    &-title
+        font-family: "FiraSans-ExtraBold"
+        font-size: 28px
+        line-height: 40px
+        text-transform: uppercase
+        margin-bottom: 25px
+        @include respond(specialPoint-460)
+            text-align: center
+    &-inner
+        display: flex
+        @include respond(specialPoint-460)
+            display: block
+    &-box
+        text-align: center
+        margin-right: 57px
+    &-img
+        min-height: 105px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 35px
+    &-name
+        font-family: "FiraSans-Regular"
+        font-size: 18px
+        line-height: 22px
+        letter-spacing: 8px
+        text-transform: uppercase
+        opacity: 0.5
+        margin-bottom: 16px
+    &-price
+        font-family: "FiraSans-ExtraBold"
+        font-size: 18px
+        line-height: 40px
+        text-transform: uppercase
+.surfboard
+    position: relative
+    .surfboard__position--1
+        top: 215px
+        right: 45px
+        @include respond(specialPoint-680)
+            left: 155px
+        .surfboard-box__content
+            @include respond(specialPoint-680)
+                left: -177px
+    .surfboard__position--2
+        top: 315px
+        left: -6px
+    .surfboard__position--3
+        bottom: 70px
+        left: 52px
+        .surfboard-box__content
+            padding: 0 104px 0 0
+            top: -15px
+            left: -400px
+            @include respond(desctop)
+                left: 60px
+            @include respond(specialPoint-460)
+                left: 30px
+            &::before
+                content: ""
+                position: absolute
+                top: 50%
+                right: 0
+                left: auto
+                width: 80px
+                height: 1px
+                background-color: $sub-white-color
+                @include respond(desctop)
+                    width: 20px
+                    left: -32px
+                    right: auto
+    &-box
+        position: absolute
+        &__circle
+            width: 20px
+            height: 20px
+            border-radius: 50%
+            position: relative
+            background-color: $brand-color
+            cursor: pointer
+            &.active
+                .circle-row
+                    transform: translate(-50%, -50%) rotate(0deg)
+            &.active + .surfboard-box__content
+                display: block
+            .circle-row
+                background-color: $secondary-color
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%) rotate(90deg)
+                width: 12px
+                height: 2px
+                & + .circle-row
+                    transform: translate(-50%, -50%) rotate(0deg)
+        &__content
+            display: none
+            width: 359px
+            position: absolute
+            top: -15px
+            left: 40px
+            font-family: "FiraSans-ExtraBold"
+            font-size: 24px
+            line-height: 24px
+            text-transform: uppercase
+            padding-left: 104px
+            @include respond (tab-port)
+                padding-left: 0
+                top: 35px
+                left: 0
+                width: 270px
+            &::before
+                content: ""
+                position: absolute
+                top: 50%
+                left: 0
+                width: 80px
+                height: 1px
+                background-color: $sub-white-color
+                @include respond (tab-port)
+                    display: none

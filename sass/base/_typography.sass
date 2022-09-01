@@ -1,0 +1,73 @@
+body
+    font-family: "Fira Sans", sans-serif
+    background-color: $background
+    color: $brand-color
+    min-width: 320px
+    overflow-x: hidden
+
+a
+    display: inline-block
+    text-decoration: none
+    $brand-color: #fff
+
+.headeline-left
+    @include headline-left
+    &::before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 0
+        width: 80px
+        height: 1px
+        background-color: $sub-white-color
+        @include respond (specialPoint-1040)
+            width: 50px
+.headeline-right
+    @include headline-right
+    &::before
+        content: ""
+        position: absolute
+        top: 50%
+        right: 0
+        width: 80px
+        height: 1px
+        background-color: $sub-white-color
+        @include respond (specialPoint-1040)
+            width: 50px
+.title
+    span
+        position: relative
+        font-family: "FiraSans-ExtraBold"
+        font-size: 200px
+        text-transform: uppercase
+        color: rgba($brand-color, .02)
+        transform: translateX(-50px)
+        display: inline-block
+        @include respond(specialPoint-720)
+            font-size: 100px
+            padding-bottom: 80px
+            padding-left: 10px
+        @include respond (specialPoint-460)
+            font-size: 80px
+            padding-left: 33px
+    h2
+        position: absolute
+        top: 0
+        right: -10px
+        @include title-h1
+        &::after
+            content: ""
+            position: absolute
+            top: 0
+            right: 0
+            width: 80px
+            height: 1px
+            background-color: $secondary-color
+.subtitle
+    display: inline-block
+    text-align: right
+    &__head
+        @include info-text
+        padding-right: 8px
+        span
+            font-family: "FiraSans-Light"

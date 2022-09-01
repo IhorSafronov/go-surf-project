@@ -1,0 +1,37 @@
+.header__slider
+    .header__slider-item
+        position: relative
+        height: 100vh
+        background-image: url("./../img/header-bg.jpg")
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+    .slider-item__info
+        position: absolute
+        right: 80px
+        bottom: 116px
+        text-align: right
+        @include respond (specialPoint-1040)
+            right: 20px
+            bottom: 17px
+        .slider-item__info-title
+            @include title-h1
+            margin-bottom: 48px
+            @include respond (specialPoint-1366)
+                font-size: 65px
+            @include respond (specialPoint-1040)
+                font-size: 55px
+                line-height: 55px
+        .slider-item__info-suptitle
+            margin-bottom: 5px
+        .slider-item__info-suptext
+            margin-bottom: 8px
+            @include respond (specialPoint-1040)
+                margin-bottom: 5px
+        .slider-item__info-text
+            @include info-text
+            margin-bottom: 20px
+            @include respond (specialPoint-1040)
+                font-size: 30px
+                line-height: 20px
+                margin-bottom: 15px

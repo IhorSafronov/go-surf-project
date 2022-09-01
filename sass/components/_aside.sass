@@ -1,0 +1,121 @@
+.header__aside
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 5
+    border-right: 1px solid rgba($white-color, .25)
+    height: 100vh
+    text-align: center
+    @include respond (specialPoint-1366)
+        position: absolute
+        height: 108px
+        padding-right: 25px
+        background-color: rgba($brand-color, .1)
+        border-right: none
+        text-align: left
+        display: flex
+    @include respond (specialPoint-460)
+        display: block
+        text-align: center
+        padding-right: 0
+        height: 100vh
+.logo
+        img
+            @include respond (big-screen)
+                width: 100px
+.menu
+    padding-top: 40px
+    @include respond (big-screen)
+        padding-top: 10px
+    @include respond (specialPoint-1366)
+        padding-top: 0
+    @include respond (specialPoint-1040)
+        background-color: $black-color
+        z-index: 22
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        transform: translateX(-100%)
+        display: flex
+        justify-content: center
+        align-items: center
+        padding-top: 16px
+        transition: all .5s
+        &.active
+            transform: translateX(0)
+    &__list
+        text-align: center
+        li
+            @include respond (specialPoint-1366)
+                display: inline-block
+    a
+        color: $brand-color
+        @include respond (specialPoint-1366)
+            padding: 15px
+        span
+            display: block
+            padding-top: 6px
+            margin-bottom: 20px
+            font-family: "FiraSans-Medium"
+            font-size: 12px
+            line-height: 14px
+            letter-spacing: 3px
+
+.header__search
+    padding: 15px 0 35px 0
+    @include respond (big-screen)
+        padding-bottom: 8px
+    @include respond (specialPoint-1366)
+        padding: 33px 15px 15px
+    @include respond (specialPoint-1040)
+        padding: 40px 15px 15px
+    @include respond (specialPoint-460)
+        padding: 15px 0 15px
+.header__date
+    font-family: "FiraSans-ExtraBold"
+    font-size: 72px
+    line-height: 64px
+    @include respond (big-screen)
+        font-size: 60px
+    @include respond (specialPoint-1366)
+        padding: 15px
+    @include respond (specialPoint-460)
+        padding: 0
+        font-size: 50px
+        line-height: 45px
+    span
+        display: block
+        font-family: "FiraSans-Light"
+        font-size: 16px
+        line-height: 19px
+        letter-spacing: 1.4px
+        padding-top: 17px
+        margin-bottom: 30px
+        @include respond (big-screen)
+            font-size: 14px
+            padding-top: 0
+            margin-bottom: 15px
+        @include respond (specialPoint-460)
+            font-size: 12px
+.header__location
+    display: inline-block
+    position: relative
+    padding-left: 19px
+    font-family: "FiraSans-Light"
+    font-size: 12px
+    line-height: 14px
+    letter-spacing: 1.05px
+    @include respond (specialPoint-1366)
+        margin-top: 42px
+    @include respond (specialPoint-460)
+        margin: 0
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 11px
+        height: 13px
+        background-image: url("./../../icons/marker.svg")

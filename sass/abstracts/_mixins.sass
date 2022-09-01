@@ -1,0 +1,162 @@
+// Responsive
+// Стандартные брейкпоинты
+@mixin respond($breakpoint)
+    // Специальные брейкпоинты для конкретного сайта
+    @if $breakpoint == specialPoint-374
+        @media only screen and (max-width: 374px)
+            @content
+    // Специальные брейкпоинты для конкретного сайта
+    @if $breakpoint == specialPoint-425
+        @media only screen and (max-width: 425px)
+            @content
+    // Специальные брейкпоинты для конкретного сайта
+    @if $breakpoint == specialPoint-460
+        @media only screen and (max-width: 460px)
+            @content
+    // Специальные брейкпоинты для конкретного сайта
+    @if $breakpoint == specialPoint-520
+        @media only screen and (max-width: 520px)
+            @content
+    @if $breakpoint == phone 
+        @media only screen and (max-width: 576px)
+            @content
+    // Специальные брейкпоинты для конкретного сайта
+    @if $breakpoint == specialPoint-640
+        @media only screen and (max-width: 640px)
+            @content
+    // Специальные брейкпоинты для конкретного сайта
+    @if $breakpoint == specialPoint-680
+        @media only screen and (max-width: 680px)
+            @content
+    // Специальные брейкпоинты для конкретного сайта
+    @if $breakpoint == specialPoint-720
+        @media only screen and (max-width: 720px)
+            @content
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 768px)
+            @content
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 992px)
+            @content
+    // Специальные брейкпоинты для конкретного сайта
+    @if $breakpoint == specialPoint-1040
+        @media only screen and (max-width: 1040px)
+            @content
+    // Специальные брейкпоинты для конкретного сайта
+    @if $breakpoint == specialPoint-1050
+        @media only screen and (max-width: 1050px)
+            @content
+    // Специальные брейкпоинты для конкретного сайта
+    @if $breakpoint == specialPoint-1102
+        @media only screen and (max-width: 1102px)
+            @content
+    // Специальные брейкпоинты для конкретного сайта
+    @if $breakpoint == specialPoint-1150
+        @media only screen and (max-width: 1150px)
+            @content
+    @if $breakpoint == desctop
+        @media only screen and (max-width: 1200px)
+            @content
+    // Специальные брейкпоинты для конкретного сайта
+    @if $breakpoint == specialPoint-1340
+        @media only screen and (max-width: 1340px)
+            @content
+    // Специальные брейкпоинты для конкретного сайта
+    @if $breakpoint == specialPoint-1366
+        @media only screen and (max-width: 1366px)
+            @content
+    @if $breakpoint == big-screen
+        @media only screen and (max-width: 1440px)
+            @content
+    @if $breakpoint == full-screen
+        @media only screen and (min-width: 1441px)
+            @content
+
+
+// Typogpaphy
+@mixin title-h1
+    font-family: "FiraSans-ExtraBold"
+    font-size: 80px
+    line-height: 86px
+    text-transform: uppercase
+    color: $brand-color
+
+@mixin title-h2
+    font-family: "FiraSans-ExtraBold"
+    font-size: 80px
+    line-height: 156px
+    text-transform: uppercase
+    color: $brand-color
+
+@mixin headline-left
+    font-family: "FiraSans-Regular"
+    font-size: 22px
+    line-height: 32px
+    letter-spacing: 7.33333px
+    text-transform: uppercase
+    color: $sub-white-color
+    text-align: right
+    padding-left: 103px
+    position: relative
+    display: inline-block
+    @include respond (specialPoint-1040)
+        font-size: 16px
+        line-height: 18px
+        padding-left: 65px
+    @include respond (specialPoint-520)
+        letter-spacing: 2.33333px
+@mixin headline-right
+    font-family: "FiraSans-Regular"
+    font-size: 22px
+    line-height: 32px
+    letter-spacing: 7.33333px
+    text-transform: uppercase
+    color: $sub-white-color
+    text-align: right
+    padding-right: 103px
+    position: relative
+    display: inline-block
+    @include respond (specialPoint-1040)
+        font-size: 16px
+        line-height: 18px
+        padding-right: 65px
+    @include respond (specialPoint-520)
+        letter-spacing: 2.33333px
+@mixin info-text
+    font-family: "FiraSans-ExtraBold"
+    font-size: 40px
+    line-height: 46px
+    text-transform: uppercase
+    color: $brand-color
+    @include respond (specialPoint-520)
+        font-size: 35px
+        padding-right: 0
+@mixin main-title
+    font-family: "FiraSans-ExtraBold"
+    font-size: 40px
+    line-height: 36px
+    text-transform: uppercase
+    color: $brand-color
+
+@mixin main-subtitle
+    font-family: "FiraSans-Regular"
+    font-size: 18px
+    line-height: 22px
+    letter-spacing: 8px
+    text-transform: uppercase
+    color: $brand-color
+    opacity: 0.5
+    transform: rotate(-90deg)
+    @include respond(specialPoint-1040)
+        transform: rotate(0)
+
+@mixin btn-text
+    font-family: "FiraSans-ExtraBold"
+    font-size: 40px
+    line-height: 36px
+    text-transform: uppercase
+    color: $brand-color
+    @include respond (specialPoint-640)
+        font-size: 30px
+    
+

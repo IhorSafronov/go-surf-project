@@ -1,0 +1,183 @@
+.slider-map
+    max-width: 1200px
+    min-height: 635px
+    background-image: url("./../img/world-map-dots.png")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    margin: 0 auto
+    @include respond (desctop)
+        max-width: 1000px
+        min-height: 515px
+    @include respond (specialPoint-1102)
+        background-image: none
+        max-width: 100%
+        min-height: 280px
+    .slick-track
+        transform: translate3d(0px, 0px, 0px) !important
+        @include respond (specialPoint-1102)
+            min-height: 280px
+    .slick-list
+        min-height: 635px
+        overflow: hidden
+        @include respond (desctop)
+            min-height: 515px
+        @include respond (specialPoint-1102)
+            overflow: hidden
+            min-height: 280px
+    .slick-current
+        .slider-dots__content
+            display: block
+            width: 285px
+            padding: 28px 31px 0 32px
+.slider-dots__content-row
+    display: flex
+    justify-content: space-between
+    padding-bottom: 30px
+.slider-dots__content-title
+    font-family: "FiraSans-ExtraBold"
+    font-size: 18px
+    line-height: 26px
+    text-transform: uppercase
+    padding-bottom: 8px
+    margin-bottom: 8px
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 80px
+        height: 1px
+        background-color: $secondary-color
+.slider-dots__content-subtitle
+    font-family: "FiraSans-Regular"
+    font-size: 16px
+    line-height: 19px
+.slider-dots__circle
+    width: 23px
+    height: 23px
+    background-color: $secondary-color
+    border-radius: 50%
+    box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777)
+    @include respond (specialPoint-1102)
+        display: none
+.slider-dots__content-link
+    padding-top: 4px
+.slider-dots__content
+    display: none
+    background-color: rgba(#0F1010, .7)
+    border-radius: 6px
+    position: absolute
+    bottom: 35px
+    transform: translateX(-50%)
+    @include respond (specialPoint-1102)
+        display: block
+        transform: translateX(0)
+        width: 285px
+        padding: 28px 31px 0 32px
+    @include respond(specialPoint-425)
+        width: 250px
+        padding: 28px 15px 0
+    @include respond(specialPoint-374)
+        width: 200px
+        padding: 28px 10px 0
+    &::before
+        content: ""
+        position: absolute
+        bottom: -21px
+        left: 142px
+        width: 0
+        height: 0
+        border-bottom: 20px solid $secondary-color
+        border-left: 12px solid transparent
+        border-right: 12px solid transparent
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+        @include respond (specialPoint-1102)
+            display: none
+.slider-dots
+    position: relative
+    @include respond (specialPoint-1102)
+        position: static
+.slider-dots--1
+    top: 330px
+    left: 0
+    @include respond (desctop)
+        top: 266px
+    .slider-dots__content
+        transform: translateY(0)
+        &::before
+            left: -0.5px
+.slider-dots--2
+    top: 270px
+    left: 0
+    @include respond (desctop)
+        top: 232px
+    .slider-dots__circle
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            top: -25px
+            right: -15px
+            width: 14px
+            height: 17px
+            background-image: url("./../img/mini-marker.png")
+            background-size: cover
+.slider-dots--3
+    top: 330px
+    left: 25px
+    @include respond (desctop)
+        top: 253px
+.slider-dots--4 
+    top: 470px
+    left: -25px
+    @include respond (desctop)
+        top: 390px
+.slider-dots--5
+    top: 230px
+    left: -65px
+    @include respond (desctop)
+        top: 180px
+.slider-dots--6
+    top: 550px
+    left: -120px
+    @include respond (desctop)
+        top: 430px
+        left: -85px
+.slider-dots--7
+    top: 375px
+    left: -95px
+    @include respond (desctop)
+        top: 310px
+        left: -85px
+.slider-dots--8
+    top: 470px
+    right: 0
+    @include respond (desctop)
+        top: 370px
+        left: 0
+    .slider-dots__content
+        transform: translateX(-262px)
+        @include respond (specialPoint-1102)
+            transform: translateX(0px)
+        &::before
+            left: auto
+            right: 0
+.slider-dots__conten-item
+    text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+    img
+        margin-bottom: 8px
+    .slider-dots__conten-number
+        font-family: "FiraSans-ExtraBold"
+        font-size: 16px
+        line-height: 23px
+    .slider-dots__conten-name
+        font-family: "FiraSans-Light"
+        font-size: 10px
+        line-height: 12px
+        text-transform: uppercase
